@@ -26,5 +26,6 @@ tests += LazyConstantTests.allTests()
 tests += Trimmed.allTests()
 tests += UndoRedoTests.allTests()
 tests += UserDefaultTests.allTests()
+tests += UserDefaultOptionalTests.allTests()
 
 XCTMain(tests)
