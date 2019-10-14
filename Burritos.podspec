@@ -101,7 +101,13 @@ A collection of well tested Swift Property Wrappers.
 
   ## @UserDefault
   s.subspec 'UserDefault' do |sp|
-    sp.source_files = 'Sources/UserDefault/*'
+    sp.source_files = 'Sources/UserDefault/*', 'Sources/UserDefaultTypes.swift'
+    sp.framework = 'Foundation'
+  end
+
+  ## @UserDefaultOptional
+  s.subspec 'UserDefaultOptional' do |sp|
+    sp.source_files = 'Sources/UserDefaultOptional/*', 'Sources/UserDefaultTypes.swift'
     sp.framework = 'Foundation'
   end
 end
