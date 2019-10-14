@@ -11,6 +11,7 @@ import LazyTests
 import TrimmedTests
 import UndoRedoTests
 import UserDefaultTests
+import UserDefaultOptionalTests
 
 var tests = [XCTestCaseEntry]()
 tests += AtomicWriteTests.allTests()
