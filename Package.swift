@@ -29,6 +29,7 @@ let package = Package(
                 "Trimmed",
                 "UndoRedo",
                 "UserDefault",
+                "UserDefaultOptional",
             ]),
     ],
     dependencies: [], // No dependencies
@@ -64,6 +65,8 @@ let package = Package(
         .testTarget(name: "UndoRedoTests", dependencies: ["UndoRedo"]),
         .target(name: "UserDefault", dependencies: []),
         .testTarget(name: "UserDefaultTests", dependencies: ["UserDefault"]),
+        .target(name: "UserDefaultOptional", dependencies: []),
+        .testTarget(name: "UserDefaultOptionalTests", dependencies: ["UserDefaultOptional"]),
     ],
     swiftLanguageVersions: [.v5]
 )
