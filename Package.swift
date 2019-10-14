@@ -16,19 +16,62 @@ let package = Package(
         .library(
             name: "Burritos",
             targets: [
-                "AtomicWrite",
-                "Clamping",
-                "Copying",
-                "DefaultValue",
-                "DynamicUIColor",
-                "EnvironmentVariable",
-                "Expirable",
-                "LateInit",
-                "Lazy",
-                "LazyConstant",
-                "Trimmed",
-                "UndoRedo",
-                "UserDefault",
+                .target(
+                    name: "AtomicWrite",
+                    path: "Sources",
+                    sources: ["AtomicWrite"]),
+                .target(
+                    name: "Clamping",
+                    path: "Sources",
+                    sources: ["Clamping"]),
+                .target(
+                    name: "Copying",
+                    path: "Sources",
+                    sources: ["Copying"]),
+                .target(
+                    name: "DefaultValue",
+                    path: "Sources",
+                    sources: ["DefaultValue"]),
+                .target(
+                    name: "DynamicUIColor",
+                    path: "Sources",
+                    sources: ["DynamicUIColor"]),
+                .target(
+                    name: "EnvironmentVariable",
+                    path: "Sources",
+                    sources: ["EnvironmentVariable"]),
+                .target(
+                    name: "Expirable",
+                    path: "Sources",
+                    sources: ["Expirable"]),
+                .target(
+                    name: "LateInit",
+                    path: "Sources",
+                    sources: ["LateInit"]),
+                .target(
+                    name: "Lazy",
+                    path: "Sources",
+                    sources: ["Lazy"]),
+                .target(
+                    name: "LazyConstant",
+                    path: "Sources",
+                    sources: ["LazyConstant"]),
+                .target(
+                    name: "Trimmed",
+                    path: "Sources",
+                    sources: ["Trimmed"]),
+                .target(
+                    name: "UndoRedo",
+                    path: "Sources",
+                    sources: ["UndoRedo"]),
+                .target(
+                    name: "UserDefault",
+                    path: "Sources",
+                    sources: ["UserDefault", "UserDefaultTypes.swift"]),
+                .target(
+                    name: "UserDefaultOptional",
+                    path: "Sources",
+                    sources: ["UserDefaultOptional", "UserDefaultTypes.swift"]),
             ]),
     ],
     dependencies: [], // No dependencies
@@ -64,6 +107,8 @@ let package = Package(
         .testTarget(name: "UndoRedoTests", dependencies: ["UndoRedo"]),
         .target(name: "UserDefault", dependencies: []),
         .testTarget(name: "UserDefaultTests", dependencies: ["UserDefault"]),
+        .target(name: "UserDefaultOptional", dependencies: []),
+        .testTarget(name: "UserDefaultOptionalTests", dependencies: ["UserDefaultOptional"]),
     ],
     swiftLanguageVersions: [.v5]
 )
