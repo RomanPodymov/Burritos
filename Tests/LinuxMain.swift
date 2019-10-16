@@ -8,6 +8,7 @@ import EnvironmentVariableTests
 import ExpirableTests
 import LateInitTests
 import LazyTests
+import MappingSetterTests
 import TrimmedTests
 import UndoRedoTests
 import UserDefaultTests
