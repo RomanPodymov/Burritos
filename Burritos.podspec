@@ -13,6 +13,8 @@ A collection of well tested Swift Property Wrappers.
   * @LateInit
   * @Lazy
   * @LazyConstant
+  * @MappingGetter
+  * @MappingSetter
   * @Trimmed
   * @UndoRedo
   * @UserDefault
@@ -85,6 +87,16 @@ A collection of well tested Swift Property Wrappers.
   ## @LazyConstant
     s.subspec 'LazyConstant' do |sp|
     sp.source_files = 'Sources/LazyConstant/*'
+  end
+
+  ## @MappingGetter
+    s.subspec 'MappingGetter' do |sp|
+    sp.source_files = 'Sources/MappingGetter/*'
+  end
+
+  ## @MappingSetter
+    s.subspec 'MappingSetter' do |sp|
+    sp.source_files = 'Sources/MappingSetter/*'
   end
 
   ## @Trimmed
