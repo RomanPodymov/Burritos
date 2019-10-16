@@ -72,6 +72,11 @@ A collection of well tested Swift Property Wrappers.
     sp.framework = 'Foundation'
   end
 
+  ## @IntValue
+  s.subspec 'IntValue' do |sp|
+    sp.source_files = 'Sources/IntValue/*'
+  end
+
   ## @LateInit
   s.subspec 'LateInit' do |sp|
     sp.source_files = 'Sources/LateInit/*'
