@@ -19,6 +19,12 @@ final class MappingSetterTests: XCTestCase {
     @MappingSetter(mappingSetter: { $0 })
     var unmodified: String = "Hello, "
 
+    @MappingSetter(mappingSetter: { abs($0) })
+    var absDouble = -100.0
+
+    @MappingSetter(mappingSetter: { $0.filter { $0 < 10 } })
+    var lessThanTen = [1, 2, 14, 20, 5, 30]
+
     func testTrimmed() {
         trimmed += "\n \n"
         XCTAssertEqual(trimmed, "Hello, World!")
@@ -34,9 +40,21 @@ final class MappingSetterTests: XCTestCase {
         XCTAssertEqual(unmodified, "Hello, World!")
     }
 
+    func testAbsDouble() {
+        absDouble += 50
+        XCTAssertEqual(absDouble, 150)
+    }
+
+    func testLessThanTen() {
+        lessThanTen += [8, 9, 50, 4]
+        XCTAssertEqual(lessThanTen, [1, 2, 5, 8, 9, 4])
+    }
+
     static var allTests = [
         ("testTrimmed", testTrimmed),
         ("testUpToFive", testUpToFive),
         ("testUnmodified", testUnmodified),
+        ("testAbsDouble", testAbsDouble),
+        ("testLessThanTen", testLessThanTen),
     ]
 }
